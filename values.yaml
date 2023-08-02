@@ -1,0 +1,63 @@
+github-test-2-backend-module-2-chart:
+  image:
+    repository: artifactory.dagility.com/docker/github-test-2-backend-module-2
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: github-test-2-backend-module-2-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
+github-test-2-frontend-module-2-chart:
+  image:
+    repository: artifactory.dagility.com/docker/github-test-2-frontend-module-2
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: github-test-2-frontend-module-2-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
+github-test-2-frontend-chart:
+  image:
+    repository: artifactory.dagility.com/docker/github-test-2-frontend
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: github-test-2-frontend-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
+github-test-2-backend-chart:
+  image:
+    repository: artifactory.dagility.com/docker/github-test-2-backend
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: github-test-2-backend-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
