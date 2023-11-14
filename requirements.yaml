@@ -1,4 +1,7 @@
 dependencies:
+  - name: github-test-2-backend-chart
+    repository: https://artifactory.dagility.com/artifactory/helm/
+    version: 0.1.0
   - name: github-test-2-backend-module-2-chart
     repository: https://artifactory.dagility.com/artifactory/helm/
     version: 0.1.0
@@ -6,8 +9,5 @@ dependencies:
     repository: https://artifactory.dagility.com/artifactory/helm/
     version: 0.1.0
   - name: github-test-2-frontend-chart
-    repository: https://artifactory.dagility.com/artifactory/helm/
-    version: 0.1.0
-  - name: github-test-2-backend-chart
     repository: https://artifactory.dagility.com/artifactory/helm/
     version: 0.1.0
