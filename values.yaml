@@ -8,7 +8,7 @@ github-test-2-backend-module-2-chart:
     annotations:
       kubernetes.io/ingress.class: nginx-internal
     hosts:
-    - host: github-test-2-backend-module-2-default.dagility.com
+    - host: github-test-2-backend-module-2-habitat-test3.dagility.com
       paths:
       - /
   serviceAccount:
@@ -24,7 +24,7 @@ github-test-2-frontend-module-2-chart:
     annotations:
       kubernetes.io/ingress.class: nginx-internal
     hosts:
-    - host: github-test-2-frontend-module-2-default.dagility.com
+    - host: github-test-2-frontend-module-2-habitat-test3.dagility.com
       paths:
       - /
   serviceAccount:
@@ -40,7 +40,7 @@ github-test-2-frontend-chart:
     annotations:
       kubernetes.io/ingress.class: nginx-internal
     hosts:
-    - host: github-test-2-frontend-default.dagility.com
+    - host: github-test-2-frontend-habitat-test3.dagility.com
       paths:
       - /
   serviceAccount:
@@ -56,7 +56,7 @@ github-test-2-backend-chart:
     annotations:
       kubernetes.io/ingress.class: nginx-internal
     hosts:
-    - host: github-test-2-backend-default.dagility.com
+    - host: github-test-2-backend-habitat-test3.dagility.com
       paths:
       - /
   serviceAccount:
