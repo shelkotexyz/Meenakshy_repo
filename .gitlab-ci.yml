@@ -1,0 +1,14 @@
+variables:
+  MICROSERVICE_NAME: samplemavengitlab
+  NAMESPACE: java-ns
+  JAVA_BUILD_COMMAND: "mvn clean install"
+  JAVA_TEST_COMMAND: "mvn test"
+  SONAR_COMMAND: "mvn sonar:sonar -Dsonar.projectName=samplemavengitlab -Dsonar.projectKey=samplemavengitlab -Dsonar.java.binaries=target/classes -Dsonar.sources=src/main"
+  PACKAGE_REGISTRY: "sf-maven"
+  SF_JAVA_8_IMAGE: "artifactory.dagility.com/docker-sf/java-8:latest"
+  SF_AGENT_IMAGE: "registry.dagility.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/sf-agent:lts"
+  CONTAINER_REGISTRY_REPO: "docker-sf"
+include:
+  - project: solution-factory/sf-devsecops/sf-native-pipelines
+    ref: main
+    file: ci-maven.yml
